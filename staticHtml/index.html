@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,20 +10,64 @@
     <meta name="author" content="">
     <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
     <title>Hore</title>
-
     <!-- Bootstrap core CSS -->
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Carousel Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- 自定义CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+        .banner { position: relative; overflow: auto; }
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#index-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hore Studio</a>         
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="index-navbar-collapse">
+             <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">博客</a></li>
+                <li><a href="#">照片</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">关于我们</a></li>
+             </ul>  
+             <button type="button" class="btn btn-default navbar-btn navbar-right">登陆</button>  
+        </div>   
+    </div>
+</nav>
+<div class="container">
+    <div class="banner jumbotron" hight="500px">
+        <ul>
+            <li>This is a slide.</li>
+            <li>This is another slide.</li>
+            <li>This is a final slide.</li>
+        </ul>
+    </div>
+</div>
 
-    <!-- Custom styles for this template -->
-    <link href="http://v3.bootcss.com/examples/carousel/carousel.css" rel="stylesheet">
-  </head>
+<!-- Bootstrap core JavaScript-->
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/unslider.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.banner').unslider();
+});
+
+</script>
+</body>
+</html>
